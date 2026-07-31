@@ -17,7 +17,6 @@ logger = get_logger()
 
 # Random Forest 
 def build_random_forest(n_estimators: int = 100, seed: int = 42) -> Pipeline:
-    """Build a Random Forest pipeline with StandardScaler."""
     return Pipeline([
         ("scaler", StandardScaler()),
         ("clf",    RandomForestClassifier(
@@ -30,7 +29,6 @@ def build_random_forest(n_estimators: int = 100, seed: int = 42) -> Pipeline:
 
 
 def build_logistic_regression(seed: int = 42) -> Pipeline:
-    """Build a Logistic Regression pipeline with StandardScaler."""
     return Pipeline([
         ("scaler", StandardScaler()),
         ("clf",    LogisticRegression(
